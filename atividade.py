@@ -1,3 +1,4 @@
+#Meu projeto
 import customtkinter as ctk
 from tkinter import messagebox
 
@@ -22,23 +23,23 @@ def verificar_habilitacao():
         return
 
     if idade >= 18:
-        resultado.configure(text=f"{nome}, você está apto(a) a dirigir!", text_color="green")
+        resultado.configure(text=f"{nome}, você pode dirigir!", text_color="purple")
     else:
-        resultado.configure(text=f"{nome}, você NÃO está apto(a) a dirigir.", text_color="red")
+        resultado.configure(text=f"{nome}, você não pode dirigir.", text_color="yellow")
 
-label_nome = ctk.CTkLabel(janela, text="Digite seu nome")
+label_nome = ctk.CTkLabel(janela, text="Informe seu nome")
 label_nome.pack()
 entrada_nome = ctk.CTkEntry(janela, width=200)
 entrada_nome.pack(pady=20)
 
 
-label_idade = ctk.CTkLabel(janela, text="Digite sua idade")
+label_idade = ctk.CTkLabel(janela, text="Informe sua idade")
 label_idade.pack()
 entrada_idade = ctk.CTkEntry(janela, width=200)
 entrada_idade.pack(pady=20)
 
 
-botao = ctk.CTkButton(janela, text="Verificar", command=verificar_habilitacao)
+botao = ctk.CTkButton(janela, text="Analisar", command=verificar_habilitacao)
 botao.pack(pady=10)
 
 
